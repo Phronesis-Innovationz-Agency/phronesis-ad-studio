@@ -67,6 +67,25 @@
 		font-size: 15px;
 	}
 
+	.app-download {
+		display: inline-flex;
+		align-items: center;
+		gap: 8px;
+		margin-top: 16px;
+		padding: 9px 18px;
+		border-radius: 999px;
+		border: 1px solid var(--accent);
+		color: var(--accent-2);
+		font-size: 13.5px;
+		font-weight: 600;
+		text-decoration: none;
+		transition: background 0.15s ease;
+	}
+
+	.app-download:hover {
+		background: rgba(255, 122, 61, 0.12);
+	}
+
 	.layout {
 		display: flex;
 		align-items: flex-start;
@@ -542,6 +561,7 @@
 		<span class="mark">Phronesis Innovationz Agency</span>
 		<h1>Phronesis Ad Studio</h1>
 		<p>Describe the ad you want. We'll write it, voice it, and render it.</p>
+		<a class="app-download" href="/app/phronesis-ad-studio.apk" download>⬇ Download the Android app</a>
 	</header>
 
 	<div class="layout">

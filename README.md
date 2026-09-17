@@ -272,6 +272,18 @@ a keystore you generate with `keytool` — Capacitor's
 cover this) — not set up here since it's a one-way decision (losing that keystore later
 means losing the ability to update the Play Store listing at all).
 
+**Serving it for download from the site itself:** the web UI has a "Download the
+Android app" button (`web-ui/index.html`) linking to `/app/phronesis-ad-studio.apk`,
+served via `public/app/` (see `src/server.ts`). This is a plain static file, not wired
+into the build — after producing a new APK, copy it over manually:
+
+```bash
+cp android/app/build/outputs/apk/debug/app-debug.apk public/app/phronesis-ad-studio.apk
+```
+
+Otherwise the button keeps serving whatever APK was last copied there, even after
+`capacitor.config.ts`'s `server.url` or other app config changes.
+
 App icon/splash source images live in `resources/` (generated from
 `public/brand/logo-mark.svg`); `@capacitor/assets` reads them and writes every
 density-specific Android resource under `android/app/src/main/res/`.
@@ -304,6 +316,7 @@ density-specific Android resource under `android/app/src/main/res/`.
 - `render.yaml` — Render deployment blueprint (see "Deploying to Render" above)
 - `capacitor.config.ts` + `android/` — the Android APK wrapper project (see "Android app" above)
 - `resources/` — source icon/splash images for the Android app
+- `public/app/` — the built APK served for in-browser download (see "Android app" above)
 
 ## Roadmap toward a real product
 

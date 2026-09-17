@@ -154,6 +154,7 @@ app.use('/renders', express.static(RENDERS_DIR));
 // audio/uploads subfolders hold other visitors' generated content.
 app.use('/demo', express.static(path.join(process.cwd(), 'public', 'demo')));
 app.use('/brand', express.static(path.join(process.cwd(), 'public', 'brand')));
+app.use('/app', express.static(path.join(process.cwd(), 'public', 'app')));
 
 app.get('/api/usage', (req, res) => {
 	res.json(getUsage(res.locals.sessionId));
