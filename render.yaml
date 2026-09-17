@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: phronesis-ad-studio
+    runtime: node
+    plan: free
+    branch: main
+    buildCommand: npm install && npx remotion browser ensure
+    startCommand: npm run server
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: ELEVENLABS_API_KEY
+        sync: false
+      - key: STRIPE_SECRET_KEY
+        sync: false
+      - key: STRIPE_PRICE_ID
+        sync: false
+      - key: STRIPE_WEBHOOK_SECRET
+        sync: false
+      - key: APP_URL
+        value: https://phronesis-ad-studio.onrender.com
+    # No persistent disk on the free plan: out/renders, public/uploads and
+    # public/audio all live on local disk and are wiped on every deploy and
+    # every restart (including the free plan's idle spin-down). Rendered ad
+    # links will go stale between restarts until this is on a paid plan with
+    # a disk attached, or renders are moved to external storage (e.g. S3).
+    # public/library ships from git, so that one's unaffected.

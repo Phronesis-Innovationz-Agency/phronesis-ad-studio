@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Phronesis Ad Studio</string>
+    <string name="title_activity_main">Phronesis Ad Studio</string>
+    <string name="package_name">com.phronesisinnovationz.adstudio</string>
+    <string name="custom_url_scheme">com.phronesisinnovationz.adstudio</string>
+</resources>

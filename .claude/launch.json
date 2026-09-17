@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "web",
+      "runtimeExecutable": "C:\\Minister Daniel\\PERSONAL PROJECTS\\phronesis-ad-studio\\.claude\\start-web.cmd",
+      "runtimeArgs": [],
+      "port": 3000
+    }
+  ]
+}

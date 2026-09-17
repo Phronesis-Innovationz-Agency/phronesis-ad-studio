@@ -1,0 +1,55 @@
+{
+  "name": "phronesis-ad-studio",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Phronesis Innovationz Agency - AI-assisted advertisement video studio",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "generate": "tsx src/cli/generate.ts",
+    "render": "tsx src/cli/render.ts",
+    "make-ad": "tsx src/cli/makeAd.ts",
+    "server": "tsx src/server.ts",
+    "start": "tsx src/server.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.126.0",
+    "@capacitor/android": "^8.5.2",
+    "@capacitor/cli": "^8.5.2",
+    "@capacitor/core": "^8.5.2",
+    "@elevenlabs/elevenlabs-js": "^2.68.0",
+    "@remotion/bundler": "4.0.525",
+    "@remotion/cli": "4.0.525",
+    "@remotion/renderer": "4.0.525",
+    "audio-decode": "^3.12.0",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^16.4.5",
+    "express": "^5.2.1",
+    "multer": "^2.4.0",
+    "music-metadata": "^11.15.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "remotion": "4.0.525",
+    "stripe": "^22.6.2",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/cookie-parser": "^1.4.10",
+    "@types/express": "^5.0.6",
+    "@types/multer": "^2.2.0",
+    "@types/node": "^22.10.2",
+    "@types/react": "18.3.1",
+    "@types/react-dom": "18.3.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  },
+  "allowScripts": {
+    "sharp": true,
+    "esbuild@0.28.1": true,
+    "esbuild@0.28.2": true
+  }
+}

@@ -1,0 +1,23 @@
+node_modules
+out
+public/audio
+public/uploads
+.env
+*.log
+.remotion
+android-assets
+
+# Android build outputs and machine-specific config - the android/ project
+# itself (config, resources, gradle scripts) is checked in, but not what
+# Gradle generates or local SDK paths
+android/app/build
+android/build
+android/.gradle
+android/local.properties
+android/app/*.apk
+android/captures
+android/*.iml
+android/app/*.iml
+*.keystore
+*.jks
+key.properties

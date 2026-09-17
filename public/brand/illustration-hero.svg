@@ -1,0 +1,70 @@
+<svg viewBox="0 0 800 1000" xmlns="http://www.w3.org/2000/svg">
+	<defs>
+		<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+			<stop offset="0%" stop-color="#1b1f4a" />
+			<stop offset="100%" stop-color="#10122c" />
+		</linearGradient>
+		<linearGradient id="badge" x1="0" y1="0" x2="1" y2="1">
+			<stop offset="0%" stop-color="#ff7a3d" />
+			<stop offset="100%" stop-color="#ffcf5c" />
+		</linearGradient>
+	</defs>
+
+	<rect width="800" height="1000" fill="url(#bg)" />
+
+	<!-- soft glow accents -->
+	<circle cx="110" cy="160" r="190" fill="#ff7a3d" opacity="0.14" />
+	<circle cx="700" cy="880" r="230" fill="#ffcf5c" opacity="0.12" />
+	<circle cx="660" cy="210" r="120" fill="#ffcf5c" opacity="0.08" />
+
+	<!-- Composition deliberately keeps the frame's horizontal center (where
+	     the headline/subtext sit) clear - the person+phone cluster sits to
+	     the right, decorative elements to the left. -->
+
+	<!-- ground shadow -->
+	<ellipse cx="590" cy="880" rx="200" ry="26" fill="#000000" opacity="0.28" />
+
+	<!-- person: simple flat-illustration figure, not photorealistic -->
+	<rect x="535" y="700" width="44" height="165" rx="22" fill="#2a2f5e" />
+	<rect x="598" y="700" width="44" height="165" rx="22" fill="#20244a" />
+	<ellipse cx="557" cy="872" rx="30" ry="15" fill="#ffcf5c" />
+	<ellipse cx="620" cy="872" rx="30" ry="15" fill="#e8b84e" />
+
+	<rect x="508" y="478" width="158" height="240" rx="60" fill="#ff7a3d" />
+
+	<g transform="rotate(-28 642 430)">
+		<rect x="620" y="330" width="42" height="180" rx="21" fill="#ff7a3d" />
+	</g>
+	<g transform="rotate(14 506 540)">
+		<rect x="486" y="520" width="40" height="150" rx="20" fill="#e8683a" />
+	</g>
+
+	<circle cx="590" cy="410" r="80" fill="#ffd9ad" />
+	<path d="M 510 392 Q 590 298 670 392 L 670 423 Q 590 349 510 423 Z" fill="#33251a" />
+
+	<!-- phone, held up -->
+	<g transform="translate(672, 268) rotate(-10)">
+		<rect x="-56" y="-102" width="112" height="204" rx="20" fill="#ffffff" />
+		<rect x="-47" y="-91" width="94" height="182" rx="12" fill="#141a3c" />
+
+		<!-- logo on screen -->
+		<rect x="-27" y="-70" width="54" height="54" rx="15" fill="url(#badge)" />
+		<path d="M -11 -57 L 10 -43 L -11 -29 Z" fill="#171a21" />
+
+		<!-- "ad is ready" bars -->
+		<rect x="-31" y="6" width="62" height="9" rx="4.5" fill="#ffffff" opacity="0.9" />
+		<rect x="-31" y="23" width="44" height="9" rx="4.5" fill="#ffffff" opacity="0.55" />
+		<rect x="-31" y="48" width="62" height="28" rx="8" fill="url(#badge)" opacity="0.9" />
+	</g>
+
+	<!-- shopping bag, representing their business/service -->
+	<g transform="translate(140, 660)">
+		<path d="M -36 -8 L 36 -8 L 30 70 L -30 70 Z" fill="#ffcf5c" opacity="0.9" />
+		<path d="M -19 -8 Q -19 -46 0 -46 Q 19 -46 19 -8" stroke="#141a3c" stroke-width="9" fill="none" />
+	</g>
+
+	<!-- floating sparkle accents, kept clear of the center text zone -->
+	<path d="M 690 480 L 695 495 L 710 500 L 695 505 L 690 520 L 685 505 L 670 500 L 685 495 Z" fill="#ffcf5c" opacity="0.85" />
+	<path d="M 105 410 L 109 421 L 120 425 L 109 429 L 105 440 L 101 429 L 90 425 L 101 421 Z" fill="#ff7a3d" opacity="0.75" />
+	<path d="M 130 500 L 133 508 L 141 511 L 133 514 L 130 522 L 127 514 L 119 511 L 127 508 Z" fill="#ffffff" opacity="0.45" />
+</svg>
